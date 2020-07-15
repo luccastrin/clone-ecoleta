@@ -69,6 +69,16 @@ ul {
 	padding-left: 20px;
 }
 
+@mixin input-white() {
+	width: 100%;
+	background-color: white;
+	border-radius: 8px;
+	border: none;
+	height: 50px;
+	padding-left: 20px;
+	color: $grey;
+}
+
 @mixin select() {
 	width: 100%;
 	background-color: $grey-lighter;

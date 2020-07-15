@@ -262,6 +262,10 @@ ul {
 #form-colect-point .form-content form .itens-coleta .itens-list li:nth-child(3n) {
   margin-right: 0;
 }
+#form-colect-point .form-content form .itens-coleta .itens-list li img,
+#form-colect-point .form-content form .itens-coleta .itens-list li p {
+  pointer-events: none;
+}
 #form-colect-point .form-content form .itens-coleta .itens-list li img {
   margin-bottom: 30px;
 }

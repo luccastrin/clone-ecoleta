@@ -49,7 +49,7 @@
 	float: left;
 	width: 100%;
 	padding: 40px 0;
-	background-image: url("images/home-background.svg");
+	background-image: url("../images/home-background.svg");
 	background-repeat: no-repeat;
 	background-position: 35vw bottom;
 	height: 100vh;
@@ -96,6 +96,67 @@
 
 			p {
 				margin-top: 23px;
+			}
+		}
+	}
+}
+
+/**************************************
+*** MODAL ***
+*/
+#pontos-coleta {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.9);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: 2s;
+
+	&.hide {
+		display: none;
+	}
+
+	.coleta-form {
+		width: 30%;
+		text-align: center;
+		position: relative;
+
+		h2 {
+			font-size: 36px;
+			font-weight: 700;
+			color: $white;
+		}
+
+		.cross {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		ul {
+			width: 100%;
+
+			li {
+				width: 100%;
+				margin-bottom: 10px;
+
+				&:first-child {
+					margin-bottom: 30px;
+				}
+
+				input {
+					@include input-white();
+				}
+
+				button {
+					@include submit();
+					width: 100%;
+				}
 			}
 		}
 	}

@@ -133,6 +133,11 @@
 							margin-right: 0;
 						}
 
+						img,
+						p {
+							pointer-events: none;
+						}
+
 						img {
 							margin-bottom: 30px;
 						}
