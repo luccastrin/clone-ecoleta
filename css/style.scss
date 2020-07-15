@@ -1,0 +1,102 @@
+@import "base";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:ital,wght@0,500;0,700;1,300&display=swap");
+
+/**************************************
+*** HEADER ***
+*/
+#header {
+	float: left;
+	width: 100%;
+	padding: 40px 0;
+
+	.header-content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.logo {
+			width: 15%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.colect-point {
+			padding-top: 10px;
+
+			a {
+				font-size: 16px;
+				font-weight: 700;
+				color: $blue;
+				display: flex;
+				flex-direction: row;
+				cursor: pointer;
+
+				img {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+/**************************************
+*** MARKETPLACE ***
+*/
+#marketplace {
+	float: left;
+	width: 100%;
+	padding: 40px 0;
+	background-image: url("images/home-background.svg");
+	background-repeat: no-repeat;
+	background-position: 35vw bottom;
+	height: 100vh;
+
+	.text-content {
+		width: 52%;
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		h1 {
+			font-size: 50px;
+			color: $blue;
+			font-family: "ubuntu", sans-serif;
+			margin-bottom: 20px;
+		}
+
+		h2 {
+			width: 75%;
+			font-size: 20px;
+			font-weight: 500;
+			color: $grey;
+			margin-bottom: 20px;
+		}
+
+		a {
+			width: 55%;
+			background-color: $green-lighter;
+			border-radius: 8px;
+			font-size: 16px;
+			font-weight: 700;
+			color: $white;
+			cursor: pointer;
+
+			img {
+				float: left;
+				padding: 20px;
+				background-color: $green-darker;
+				margin-right: 20px;
+				border-top-left-radius: 8px;
+				border-bottom-left-radius: 8px;
+			}
+
+			p {
+				margin-top: 23px;
+			}
+		}
+	}
+}

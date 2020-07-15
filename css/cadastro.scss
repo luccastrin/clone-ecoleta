@@ -1,0 +1,142 @@
+@import "style";
+
+/**************************************
+*** MARKETPLACE ***
+*/
+#form-colect-point {
+	float: left;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+
+	.form-content {
+		width: 55%;
+		background-color: $white;
+		padding: 40px 35px;
+		border-radius: 8px;
+
+		h1 {
+			width: 40%;
+			font-size: 32px;
+			color: $blue;
+			font-family: "ubuntu", sans-serif;
+			margin-bottom: 40px;
+		}
+
+		h2 {
+			font-size: 22px;
+			font-weight: 700;
+			color: $blue;
+			font-family: "ubuntu", sans-serif;
+			margin-bottom: 20px;
+		}
+
+		.form-colect-list {
+			margin-bottom: 50px;
+
+			li {
+				margin-bottom: 20px;
+
+				&:nth-child(2) {
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+
+					.content-1 {
+						width: 70%;
+						margin-right: 4%;
+					}
+
+					.content-2 {
+						width: 26%;
+					}
+				}
+
+				&:nth-child(3) {
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+
+					.content-1 {
+						width: 48%;
+						margin-right: 5%;
+					}
+
+					.content-2 {
+						width: 48%;
+					}
+				}
+
+				p {
+					font-size: 14px;
+					font-weight: 500;
+					margin-bottom: 5px;
+					color: $grey;
+				}
+
+				input {
+					@include input();
+				}
+
+				select {
+					@include select();
+				}
+			}
+		}
+
+		.itens-coleta {
+			.itens-heading {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 40px;
+
+				h2 {
+					margin-bottom: 0;
+				}
+
+				h3 {
+					font-size: 14px;
+					font-weight: 500;
+					color: $grey;
+				}
+			}
+
+			button {
+				@include submit();
+				float: right;
+				margin-top: 40px;
+			}
+
+			.itens-list {
+				li {
+					float: left;
+					width: 31.3%;
+					margin-right: 3%;
+					margin-bottom: 3%;
+					background-color: $green-white;
+					text-align: center;
+					border-radius: 8px;
+					padding: 35px 0;
+					cursor: pointer;
+
+					&:nth-child(3n) {
+						margin-right: 0;
+					}
+
+					img {
+						margin-bottom: 30px;
+					}
+
+					p {
+						font-size: 16px;
+						font-weight: 400;
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+}

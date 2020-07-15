@@ -1,0 +1,90 @@
+/**************************************
+*** VARIABLES ***
+*/
+$white: #fff;
+
+$background-grey: #e5e5e5;
+
+$blue: #322153;
+
+$grey: #6c6c80;
+$grey-lighter: #f0f0f5;
+
+$black: #000;
+
+$green-darker: #2fb86e;
+$green-lighter: #34cb79;
+$green-white: #e1faec;
+
+/**************************************
+*** RESET CSS ***
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	background-color: $background-grey;
+}
+
+.container {
+	width: 1054px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	line-height: 1;
+}
+
+ul {
+	list-style: none;
+}
+
+::-moz-placeholder {
+	color: inherit;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	color: inherit;
+}
+::-webkit-input-placeholder {
+	color: inherit;
+}
+
+/**************************************
+*** MIXINS ***
+*/
+
+@mixin input() {
+	width: 100%;
+	background-color: $grey-lighter;
+	border-radius: 8px;
+	border: none;
+	height: 50px;
+	padding-left: 20px;
+}
+
+@mixin select() {
+	width: 100%;
+	background-color: $grey-lighter;
+	border-radius: 8px;
+	border: none;
+	height: 50px;
+	padding-left: 20px;
+}
+
+@mixin submit() {
+	width: 30%;
+	height: 50px;
+	background-color: $green-lighter;
+	color: $white;
+	font-weight: 700;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+}
