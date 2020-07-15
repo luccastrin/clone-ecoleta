@@ -1,1 +1,72 @@
 @import "style";
+
+body {
+	position: relative;
+	background-color: $white;
+}
+
+#header {
+	background-color: $grey-lighter;
+	padding-bottom: 220px;
+}
+
+#points {
+	float: left;
+	width: 100%;
+	position: absolute;
+	top: 150px;
+
+	h2 {
+		font-size: 36px;
+		font-weight: 700;
+		color: $blue;
+		font-family: "ubuntu", sans-serif;
+		margin-bottom: 20px;
+	}
+
+	h4 {
+		font-size: 24px;
+		font-weight: 500;
+		color: $green-lighter;
+		margin-bottom: 20px;
+	}
+
+	h5 {
+		font-size: 16px;
+		font-weight: 400;
+		color: $grey;
+	}
+
+	p {
+		font-size: 16px;
+		font-weight: 400;
+		color: $grey;
+		margin-bottom: 40px;
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	ul {
+		float: left;
+		width: 100%;
+
+		li {
+			float: left;
+			width: 30.6%;
+			margin-right: 4%;
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+
+			img {
+				width: 100%;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

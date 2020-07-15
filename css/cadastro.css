@@ -164,43 +164,43 @@ ul {
   font-family: "ubuntu", sans-serif;
   margin-bottom: 20px;
 }
-#form-colect-point .form-content .form-colect-list {
+#form-colect-point .form-content form .form-colect-list {
   margin-bottom: 50px;
 }
-#form-colect-point .form-content .form-colect-list li {
+#form-colect-point .form-content form .form-colect-list li {
   margin-bottom: 20px;
 }
-#form-colect-point .form-content .form-colect-list li:nth-child(2) {
+#form-colect-point .form-content form .form-colect-list li:nth-child(2) {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-#form-colect-point .form-content .form-colect-list li:nth-child(2) .content-1 {
+#form-colect-point .form-content form .form-colect-list li:nth-child(2) .content-1 {
   width: 70%;
   margin-right: 4%;
 }
-#form-colect-point .form-content .form-colect-list li:nth-child(2) .content-2 {
+#form-colect-point .form-content form .form-colect-list li:nth-child(2) .content-2 {
   width: 26%;
 }
-#form-colect-point .form-content .form-colect-list li:nth-child(3) {
+#form-colect-point .form-content form .form-colect-list li:nth-child(3) {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-#form-colect-point .form-content .form-colect-list li:nth-child(3) .content-1 {
+#form-colect-point .form-content form .form-colect-list li:nth-child(3) .content-1 {
   width: 48%;
   margin-right: 5%;
 }
-#form-colect-point .form-content .form-colect-list li:nth-child(3) .content-2 {
+#form-colect-point .form-content form .form-colect-list li:nth-child(3) .content-2 {
   width: 48%;
 }
-#form-colect-point .form-content .form-colect-list li p {
+#form-colect-point .form-content form .form-colect-list li p {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 5px;
   color: #6c6c80;
 }
-#form-colect-point .form-content .form-colect-list li input {
+#form-colect-point .form-content form .form-colect-list li input {
   width: 100%;
   background-color: #f0f0f5;
   border-radius: 8px;
@@ -208,7 +208,7 @@ ul {
   height: 50px;
   padding-left: 20px;
 }
-#form-colect-point .form-content .form-colect-list li select {
+#form-colect-point .form-content form .form-colect-list li select {
   width: 100%;
   background-color: #f0f0f5;
   border-radius: 8px;
@@ -216,23 +216,22 @@ ul {
   height: 50px;
   padding-left: 20px;
 }
-#form-colect-point .form-content .itens-coleta .itens-heading {
+#form-colect-point .form-content form .itens-coleta .itens-heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
 }
-#form-colect-point .form-content .itens-coleta .itens-heading h2 {
+#form-colect-point .form-content form .itens-coleta .itens-heading h2 {
   margin-bottom: 0;
 }
-#form-colect-point .form-content .itens-coleta .itens-heading h3 {
+#form-colect-point .form-content form .itens-coleta .itens-heading h3 {
   font-size: 14px;
   font-weight: 500;
   color: #6c6c80;
 }
-#form-colect-point .form-content .itens-coleta button {
-  float: right;
+#form-colect-point .form-content form .itens-coleta button {
   width: 30%;
   height: 50px;
   background-color: #34cb79;
@@ -241,27 +240,32 @@ ul {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  margin-left: auto;
+  float: right;
   margin-top: 40px;
 }
-#form-colect-point .form-content .itens-coleta .itens-list li {
+#form-colect-point .form-content form .itens-coleta .itens-list li {
   float: left;
   width: 31.3%;
+  height: 190px;
   margin-right: 3%;
   margin-bottom: 3%;
-  background-color: #e1faec;
+  background-color: #f5f5f5;
   text-align: center;
   border-radius: 8px;
   padding: 35px 0;
   cursor: pointer;
 }
-#form-colect-point .form-content .itens-coleta .itens-list li:nth-child(3n) {
+#form-colect-point .form-content form .itens-coleta .itens-list li.selected {
+  background-color: #e1faec;
+  border: 2px solid #34cb79;
+}
+#form-colect-point .form-content form .itens-coleta .itens-list li:nth-child(3n) {
   margin-right: 0;
 }
-#form-colect-point .form-content .itens-coleta .itens-list li img {
+#form-colect-point .form-content form .itens-coleta .itens-list li img {
   margin-bottom: 30px;
 }
-#form-colect-point .form-content .itens-coleta .itens-list li p {
+#form-colect-point .form-content form .itens-coleta .itens-list li p {
   font-size: 16px;
   font-weight: 400;
   color: #322153;

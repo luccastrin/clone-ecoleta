@@ -29,76 +29,82 @@
 				<h1>Cadastro do ponto de coleta</h1>
 				<h2>Dados da entidade</h2>
 
-				<ul class="form-colect-list">
-					<li>
-						<p>Nome da entidade</p>
-						<input type="text" />
-					</li>
-					<li>
-						<div class="content-1">
-							<p>Endereço</p>
+				<form action="">
+					<ul class="form-colect-list">
+						<li>
+							<p>Nome da entidade</p>
 							<input type="text" />
-						</div>
-						<div class="content-2">
-							<p>Número</p>
-							<input type="text" />
-						</div>
-					</li>
-					<li>
-						<div class="content-1">
-							<p>Estado</p>
-							<select>
-								<option>Selecione um estado</option>
-							</select>
-						</div>
-						<div class="content-2">
-							<p>Cidade</p>
-							<select>
-								<option>Selecione uma cidade</option>
-							</select>
-						</div>
-					</li>
-				</ul>
+						</li>
+						<li>
+							<div class="content-1">
+								<p>Endereço</p>
+								<input type="text" />
+							</div>
+							<div class="content-2">
+								<p>Número</p>
+								<input type="text" />
+							</div>
+						</li>
+						<li>
+							<div class="content-1">
+								<p>Estado</p>
+								<select name="uf">
+									<option>Selecione um estado</option>
+								</select>
 
-				<div class="itens-coleta">
-					<div class="itens-heading">
-						<h2>Ítens de coleta</h2>
-						<h3>Selecione um ou mais ítens abaixo</h3>
-					</div>
-
-					<ul class="itens-list">
-						<li>
-							<img src="images/lampadas.svg" alt="#" />
-							<p>Lâmpadas</p>
-						</li>
-						<li>
-							<img src="images/lampadas.svg" alt="#" />
-							<p>Pilhas e Baterias</p>
-						</li>
-						<li>
-							<img src="images/lampadas.svg" alt="#" />
-							<p>Papéis e Papelão</p>
-						</li>
-						<li>
-							<img src="images/lampadas.svg" alt="#" />
-							<p>
-								Resíduos Eletrônicos
-							</p>
-						</li>
-						<li>
-							<img src="images/lampadas.svg" alt="#" />
-							<p>
-								Resíduos Orgânicos
-							</p>
-						</li>
-						<li>
-							<img src="images/lampadas.svg" alt="#" />
-							<p>Óleo de Cozinha</p>
+								<input type="hidden" name="state" value="" />
+							</div>
+							<div class="content-2">
+								<p>Cidade</p>
+								<select name="city">
+									<option>Selecione uma cidade</option>
+								</select>
+							</div>
 						</li>
 					</ul>
-					<button type="submit">Cadastrar ponto de coleta</button>
-				</div>
+
+					<div class="itens-coleta">
+						<div class="itens-heading">
+							<h2>Ítens de coleta</h2>
+							<h3>Selecione um ou mais ítens abaixo</h3>
+						</div>
+
+						<ul class="itens-list">
+							<li data-id="1" class="selected">
+								<img src="images/lampadas.svg" alt="#" />
+								<p>Lâmpadas</p>
+							</li>
+							<li data-id="2">
+								<img src="images/baterias.svg" alt="#" />
+								<p>Pilhas e Baterias</p>
+							</li>
+							<li data-id="3">
+								<img src="images/papeis-papelao.svg" alt="#" />
+								<p>Papéis e Papelão</p>
+							</li>
+							<li data-id="4">
+								<img src="images/eletronicos.svg" alt="#" />
+								<p>
+									Resíduos Eletrônicos
+								</p>
+							</li>
+							<li data-id="5">
+								<img src="images/organicos.svg" alt="#" />
+								<p>
+									Resíduos Orgânicos
+								</p>
+							</li>
+							<li data-id="6">
+								<img src="images/oleo.svg" alt="#" />
+								<p>Óleo de Cozinha</p>
+							</li>
+						</ul>
+						<button type="submit">Cadastrar ponto de coleta</button>
+					</div>
+				</form>
 			</div>
 		</section>
+
+		<script src="js/scripts.js"></script>
 	</body>
 </html>
