@@ -1,112 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/cadastro.css" />
-		<title>Cadastro</title>
-	</head>
-	<body>
-		<header id="header">
-			<div class="container">
-				<div class="header-content">
-					<div class="logo">
-						<img src="images/logo.svg" alt="#" />
-					</div>
+{% extends 'layout.html' %}
 
-					<div class="colect-point">
-						<a href="/">
-							<img src="images/back.svg" alt="#" />
-							Voltar para home
-						</a>
-					</div>
-				</div>
-			</div>
-		</header>
+{% block title %}
+    <title>Cadastro</title> 
+{% endblock title %}
 
-		<section id="form-colect-point">
-			<div class="form-content">
-				<h1>Cadastro do ponto de coleta</h1>
-				<h2>Dados da entidade</h2>
+{% block styles %}
+    <link rel="stylesheet" href="css/cadastro.css" />
+{% endblock styles %}
 
-				<form action="">
-					<ul class="form-colect-list">
-						<li>
-							<p>Nome da entidade</p>
-							<input type="text" />
-						</li>
-						<li>
-							<div class="content-1">
-								<p>Endereço</p>
-								<input type="text" />
-							</div>
-							<div class="content-2">
-								<p>Número</p>
-								<input type="text" />
-							</div>
-						</li>
-						<li>
-							<div class="content-1">
-								<p>Estado</p>
-								<select name="uf">
-									<option>Selecione um estado</option>
-								</select>
+{% set headerId = "header" %}
+{% block contentHeader %}
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.svg" alt="#" />
+            </div>
 
-								<input type="hidden" name="state" value="" />
-							</div>
-							<div class="content-2">
-								<p>Cidade</p>
-								<select name="city">
-									<option>Selecione uma cidade</option>
-								</select>
-							</div>
-						</li>
-					</ul>
+            <div class="colect-point">
+                <a href="/">
+                    <img src="images/back.svg" alt="#" />
+                    Voltar para home
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock contentHeader %}
 
-					<div class="itens-coleta">
-						<div class="itens-heading">
-							<h2>Ítens de coleta</h2>
-							<h3>Selecione um ou mais ítens abaixo</h3>
-						</div>
+{% set formId = "form-colect-point" %}
+{% block contentForm %}
+    <div class="form-content">
+        <h1>Cadastro do ponto de coleta</h1>
+        <h2>Dados da entidade</h2>
 
-						<ul class="itens-list">
-							<li data-id="1">
-								<img src="images/lampadas.svg" alt="#" />
-								<p>Lâmpadas</p>
-							</li>
-							<li data-id="2">
-								<img src="images/baterias.svg" alt="#" />
-								<p>Pilhas e Baterias</p>
-							</li>
-							<li data-id="3">
-								<img src="images/papeis-papelao.svg" alt="#" />
-								<p>Papéis e Papelão</p>
-							</li>
-							<li data-id="4">
-								<img src="images/eletronicos.svg" alt="#" />
-								<p>
-									Resíduos Eletrônicos
-								</p>
-							</li>
-							<li data-id="5">
-								<img src="images/organicos.svg" alt="#" />
-								<p>
-									Resíduos Orgânicos
-								</p>
-							</li>
-							<li data-id="6">
-								<img src="images/oleo.svg" alt="#" />
-								<p>Óleo de Cozinha</p>
-							</li>
-						</ul>
+        <form action="">
+            <ul class="form-colect-list">
+                <li>
+                    <p>Nome da entidade</p>
+                    <input type="text" />
+                </li>
+                <li>
+                    <div class="content-1">
+                        <p>Endereço</p>
+                        <input type="text" />
+                    </div>
+                    <div class="content-2">
+                        <p>Número</p>
+                        <input type="text" />
+                    </div>
+                </li>
+                <li>
+                    <div class="content-1">
+                        <p>Estado</p>
+                        <select name="uf">
+                            <option>Selecione um estado</option>
+                        </select>
 
-						<input type="hidden" name="items" value="" />
-						<button type="submit">Cadastrar ponto de coleta</button>
-					</div>
-				</form>
-			</div>
-		</section>
+                        <input type="hidden" name="state" value="" />
+                    </div>
+                    <div class="content-2">
+                        <p>Cidade</p>
+                        <select name="city">
+                            <option>Selecione uma cidade</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
 
-		<script src="js/scripts.js"></script>
-	</body>
-</html>
+            <div class="itens-coleta">
+                <div class="itens-heading">
+                    <h2>Ítens de coleta</h2>
+                    <h3>Selecione um ou mais ítens abaixo</h3>
+                </div>
+
+                <ul class="itens-list">
+                    <li data-id="1">
+                        <img src="images/lampadas.svg" alt="#" />
+                        <p>Lâmpadas</p>
+                    </li>
+                    <li data-id="2">
+                        <img src="images/baterias.svg" alt="#" />
+                        <p>Pilhas e Baterias</p>
+                    </li>
+                    <li data-id="3">
+                        <img src="images/papeis-papelao.svg" alt="#" />
+                        <p>Papéis e Papelão</p>
+                    </li>
+                    <li data-id="4">
+                        <img src="images/eletronicos.svg" alt="#" />
+                        <p>
+                            Resíduos Eletrônicos
+                        </p>
+                    </li>
+                    <li data-id="5">
+                        <img src="images/organicos.svg" alt="#" />
+                        <p>
+                            Resíduos Orgânicos
+                        </p>
+                    </li>
+                    <li data-id="6">
+                        <img src="images/oleo.svg" alt="#" />
+                        <p>Óleo de Cozinha</p>
+                    </li>
+                </ul>
+
+                <input type="hidden" name="items" value="" />
+                <button type="submit">Cadastrar ponto de coleta</button>
+            </div>
+        </form>
+    </div>
+{% endblock contentForm %}

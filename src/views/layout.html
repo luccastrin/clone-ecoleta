@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+        {% block title %}{% endblock title %}
+
+        {% block styles %}{% endblock styles %}
+
+		<title>Home</title>
+	</head>
+	<body>
+		<header id="{{headerId}}">
+			{% block contentHeader %}
+            {% endblock contentHeader %}
+		</header>
+
+		<section id="{{marketId}}">
+			{% block content %}
+            {% endblock content %}
+		</section>
+
+		<section id="{{formId}}">
+			{% block contentForm %}
+            {% endblock contentForm %}
+		</section>
+
+		<section id="{{pointsId}}">
+			{% block contentPoints %}
+            {% endblock contentPoints %}
+		</section>
+
+        {% block modal %}
+        {% endblock modal %}
+
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

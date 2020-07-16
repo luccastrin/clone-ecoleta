@@ -1,54 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/lista.css" />
-		<title>Lista</title>
-	</head>
-	<body>
-		<header id="header">
-			<div class="container">
-				<div class="header-content">
-					<div class="logo">
-						<img src="images/logo.svg" alt="#" />
-					</div>
+{% extends 'layout.html' %}
 
-					<div class="colect-point">
-						<a href="/">
-							<img src="images/back.svg" alt="#" />
-							Voltar para home
-						</a>
-					</div>
-				</div>
-			</div>
-		</header>
+{% block title %}
+    <title>Lista</title> 
+{% endblock title %}
 
-		<section id="points">
-			<div class="container">
-				<p><span>2 pontos</span> encontrados</p>
+{% block styles %}
+    <link rel="stylesheet" href="css/lista.css" />
+{% endblock styles %}
 
-				<ul>
-					<li>
-						<img src="images/image-1.png" alt="#" />
-						<h2>Colectoria</h2>
-						<h4>Residuos Eletrônicos, Lâmpadas</h4>
-						<h5>
-							Rio do Sul, Santa Catarina, Jardim América Nº 260
-						</h5>
-					</li>
-					<li>
-						<img src="images/image-2.png" alt="" />
-						<h2>Colectoria</h2>
-						<h4>Residuos Eletrônicos, Lâmpadas</h4>
-						<h5>
-							Rio do Sul, Santa Catarina, Jardim América Nº 260
-						</h5>
-					</li>
-				</ul>
-			</div>
-		</section>
+{% set headerId = "header" %}
+{% block contentHeader %}
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.svg" alt="#" />
+            </div>
 
-		<script src="js/scripts.js"></script>
-	</body>
-</html>
+            <div class="colect-point">
+                <a href="/">
+                    <img src="images/back.svg" alt="#" />
+                    Voltar para home
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock contentHeader %}
+
+{% set pointsId = "points" %}
+{% block contentPoints %}
+    <div class="container">
+        <p><span>2 pontos</span> encontrados</p>
+
+        <ul>
+            <li>
+                <img src="images/image-1.png" alt="#" />
+                <h2>Colectoria</h2>
+                <h4>Residuos Eletrônicos, Lâmpadas</h4>
+                <h5>
+                    Rio do Sul, Santa Catarina, Jardim América Nº 260
+                </h5>
+            </li>
+            <li>
+                <img src="images/image-2.png" alt="" />
+                <h2>Colectoria</h2>
+                <h4>Residuos Eletrônicos, Lâmpadas</h4>
+                <h5>
+                    Rio do Sul, Santa Catarina, Jardim América Nº 260
+                </h5>
+            </li>
+        </ul>
+    </div>
+{% endblock contentPoints %}

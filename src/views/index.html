@@ -1,76 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css" />
-		<title>Home</title>
-	</head>
-	<body>
-		<header id="header">
-			<div class="container">
-				<div class="header-content">
-					<div class="logo">
-						<img src="images/logo.svg" alt="#" />
-					</div>
+{% extends 'layout.html' %}
 
-					<div class="colect-point">
-						<a href="/cadastro">
-							<img src="images/log-in.svg" alt="#" />
-							Cadastre um ponto de coleta
-						</a>
-					</div>
-				</div>
-			</div>
-		</header>
+{% block title %}
+    <title>Ecoleta</title> 
+{% endblock title %}
 
-		<section id="marketplace">
-			<div class="container">
-				<div class="text-content">
-					<h1>
-						Seu marketplace<br />
-						de coleta de resíduos.
-					</h1>
-					<h2>
-						Ajudamos pessoas a encontrarem pontos de coleta de forma
-						eficiente.
-					</h2>
-					<a>
-						<img src="images/search.svg" alt="#" />
-						<p>Pesquisar pontos de coleta</p>
-					</a>
-				</div>
-			</div>
-		</section>
+{% block styles %}
+    <link rel="stylesheet" href="css/style.css" />
+{% endblock styles %}
 
-		<section id="pontos-coleta" class="hide">
-			<form action="/lista" class="coleta-form">
-				<img class="cross" src="images/x.svg" alt="" />
-				<ul>
-					<li>
-						<h2>Pontos de coleta</h2>
-					</li>
-					<li>
-						<input
-							type="text"
-							name="cidade"
-							placeholder="Digite a cidade"
-						/>
-					</li>
-					<li>
-						<input
-							type="text"
-							name="estado"
-							placeholder="Digite o estado"
-						/>
-					</li>
-					<li>
-						<button type="submit">Buscar</button>
-					</li>
-				</ul>
-			</form>
-		</section>
+{% set headerId = "header" %}
+{% block contentHeader %}
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.svg" alt="#" />
+            </div>
 
-		<script src="js/scripts.js"></script>
-	</body>
-</html>
+            <div class="colect-point">
+                <a href="/cadastro">
+                    <img src="images/log-in.svg" alt="#" />
+                    Cadastre um ponto de coleta
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock contentHeader %}
+
+{% set marketId = "marketplace" %}
+{% block content %}
+    <div class="container">
+        <div class="text-content">
+            <h1>
+                Seu marketplace<br />
+                de coleta de resíduos.
+            </h1>
+            <h2>
+                Ajudamos pessoas a encontrarem pontos de coleta de forma
+                eficiente.
+            </h2>
+            <a>
+                <img src="images/search.svg" alt="#" />
+                <p>Pesquisar pontos de coleta</p>
+            </a>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block modal %}
+    {% include 'components/modal.html' %}
+{% endblock modal %}
