@@ -32,7 +32,7 @@
         <h1>Cadastro do ponto de coleta</h1>
         <h2>Dados da entidade</h2>
 
-        <form action="">
+        <form action="/savepoint" method="POST">
             <ul class="form-colect-list">
                 <li>
                     <div class="content-1">
@@ -51,7 +51,7 @@
                     </div>
                     <div class="content-2">
                         <p>Número</p>
-                        <input type="text" name="number"/>
+                        <input type="text" name="address2"/>
                     </div>
                 </li>
                 <li>
@@ -79,31 +79,31 @@
                 </div>
 
                 <ul class="itens-list">
-                    <li data-id="1">
+                    <li data-id="Lâmpadas">
                         <img src="images/lampadas.svg" alt="#" />
                         <p>Lâmpadas</p>
                     </li>
-                    <li data-id="2">
+                    <li data-id="Pilhas e Baterias">
                         <img src="images/baterias.svg" alt="#" />
                         <p>Pilhas e Baterias</p>
                     </li>
-                    <li data-id="3">
+                    <li data-id="Papéis e Papelão">
                         <img src="images/papeis-papelao.svg" alt="#" />
                         <p>Papéis e Papelão</p>
                     </li>
-                    <li data-id="4">
+                    <li data-id="Resíduos Eletrônicos">
                         <img src="images/eletronicos.svg" alt="#" />
                         <p>
                             Resíduos Eletrônicos
                         </p>
                     </li>
-                    <li data-id="5">
+                    <li data-id="Resíduos Orgânicos">
                         <img src="images/organicos.svg" alt="#" />
                         <p>
                             Resíduos Orgânicos
                         </p>
                     </li>
-                    <li data-id="6">
+                    <li data-id="Óleo de Cozinha">
                         <img src="images/oleo.svg" alt="#" />
                         <p>Óleo de Cozinha</p>
                     </li>
@@ -115,3 +115,9 @@
         </form>
     </div>
 {% endblock contentForm %}
+
+{% block modal %}
+    {% if saved %}
+        {% include 'components/modal-confirm.html' %}
+    {% endif %}
+{% endblock modal %}

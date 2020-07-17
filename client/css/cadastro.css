@@ -342,4 +342,35 @@ ul {
   color: #322153;
 }
 
+.hide {
+  display: none;
+}
+
+#modal-confirmation {
+  float: left;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#modal-confirmation.hide {
+  display: none;
+}
+#modal-confirmation .modal-content {
+  text-align: center;
+}
+#modal-confirmation .modal-content img {
+  margin-bottom: 20px;
+}
+#modal-confirmation .modal-content h2 {
+  color: #fff;
+}
+
 /*# sourceMappingURL=cadastro.css.map */

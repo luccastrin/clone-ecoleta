@@ -154,3 +154,38 @@
 		}
 	}
 }
+
+.hide {
+	display: none;
+}
+
+#modal-confirmation {
+	float: left;
+	width: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&.hide {
+		display: none;
+	}
+
+	.modal-content {
+		text-align: center;
+
+		img {
+			margin-bottom: 20px;
+		}
+
+		h2 {
+			color: $white;
+		}
+	}
+}
