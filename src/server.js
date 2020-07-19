@@ -69,16 +69,13 @@ server.post("/savepoint", (req, res) => {
 server.get("/lista", (req, res) => {
 	const lista = req.query.search;
 
-	if (lista == "") {
-		//Pesquisa vazia
-		return res.render("lista.html", {total: 0});
-	}
+	// if (lista == "") {
+	// 	//Pesquisa vazia
+	// 	return res.render("lista.html", {total: 0});
+	// }
 
 	//Trazer os dados do banco de dados para inserir na página lista
-	db.all(`SELECT * FROM places WHERE city LIKE '%${lista}%'`, function (
-		error,
-		rows
-	) {
+	db.all(`SELECT * FROM places`, function (error, rows) {
 		if (error) {
 			return console.log(error);
 		}
